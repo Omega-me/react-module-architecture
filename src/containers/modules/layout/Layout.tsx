@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
-import { Footer, Header } from "src/components";
+import { Footer } from "src/components";
 import { useTitle } from "src/hooks";
+import Header from "../header/Header";
 import s from "./layout.module.scss";
 
 interface ILayoutProps {
