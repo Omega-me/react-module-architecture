@@ -9,6 +9,8 @@ const axiosGet = async (url: string, config?: { axiosConfig?: AxiosRequestConfig
   if (config?.message) {
     if (checkSuccess(response)) {
       toast.success(config?.message, toastOptions);
+    } else {
+      toast.error(config?.message, toastOptions);
     }
   }
   return response;

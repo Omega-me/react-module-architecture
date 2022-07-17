@@ -1,4 +1,4 @@
-import { IPostState } from "src/common/interfaces";
+import { IGetPostsConfig, IPost } from "src/common/interfaces";
 import { getPosts, resetPostState } from "src/state/store/slices/posts.store";
 import { useAppDispatch, useAppSelector } from "src/state/store/store";
 
@@ -11,18 +11,22 @@ const usePosts = () => {
   const { data, isError, isLoading, isSuccess, message } = useAppSelector((state) => state.postsState);
 
   /**
-   * @setPosts sets posts in store
+   *
+   * @summary dispatch getPosts action
+   * @param config
+   * @returns void
    */
-  const setPosts = (): void => {
-    dispatch(getPosts({ showCustomErrorMessage: true, customErroMessage: "test" }));
+  const setPosts = (config?: IGetPostsConfig): void => {
+    dispatch(getPosts(config));
   };
   /**
-   * @resetPostsState reset the posts state in store
+   * @summary dispatch resetPostState action
+   * @return void
    */
   const resetPostsState = (): void => {
     dispatch(resetPostState());
   };
-  return { posts: data as IPostState[], isError, isLoading, isSuccess, message, setPosts, resetPostsState };
+  return { posts: data as IPost[], isError, isLoading, isSuccess, message, setPosts, resetPostsState };
 };
 
 export default usePosts;
