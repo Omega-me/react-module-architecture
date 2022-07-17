@@ -24,7 +24,7 @@ export const getPosts = createAsyncThunk(
     thunkAPI
   ) => {
     try {
-      const response: any = await axiosGet("https://jsonplaceholder.typicode.com/postss", {
+      const response: any = await axiosGet("/posts", {
         message: config.message,
       });
       return response.data;

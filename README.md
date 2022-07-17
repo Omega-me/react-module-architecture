@@ -1,6 +1,7 @@
 ### `Below is a picture of how the modules point and should point to each other`
 
 **Note: Every arrowhead in the diagram above represents an import statement.**
+**https://jsonplaceholder.typicode.com/posts is used as mock api for this example**
 
 ![image info](./public/architecture.png)
 
