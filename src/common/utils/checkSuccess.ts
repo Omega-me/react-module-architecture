@@ -1,17 +1,17 @@
 import { AxiosResponse } from "axios";
-import { EStatusCode } from "../enums";
+import { eStatusCode } from "../enums";
 
 /**
  *
  * @param response AxiosResponse
  * @returns boolean
  */
-export const checkSuccess = (response: AxiosResponse<any, any>): boolean => {
+export const checkSuccess = (response: AxiosResponse<any, any> | undefined): boolean => {
   if (
-    response.status === EStatusCode.OK ||
-    response.status === EStatusCode.CREATED ||
-    response.status === EStatusCode.ACCEPTED ||
-    response.status === EStatusCode.NO_CONTENT
+    response?.status === eStatusCode.OK ||
+    response?.status === eStatusCode.CREATED ||
+    response?.status === eStatusCode.ACCEPTED ||
+    response?.status === eStatusCode.NO_CONTENT
   ) {
     return true;
   } else {

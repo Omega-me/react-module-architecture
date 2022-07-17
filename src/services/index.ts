@@ -1,2 +1,2 @@
 export * from "./axiosConfig";
-export * from "./httpAgent";
+export * from "./axiosAgent";

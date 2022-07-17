@@ -1,1 +1,2 @@
-export * from "./EStatusCode";
+export * from "./eHttpMethod";
+export * from "./eStatusCode";

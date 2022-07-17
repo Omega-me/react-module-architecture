@@ -1,8 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import { toastOptions } from "src/common/configs";
+import { eHttpMethod } from "src/common/enums";
 import { IGetPostsConfig, IPost, IStateThunk } from "src/common/interfaces";
-import { axiosGet } from "src/services";
+import { axiosAgent } from "src/services";
 
 const initialState: IStateThunk<IPost> = {
   data: [],
@@ -14,7 +15,7 @@ const initialState: IStateThunk<IPost> = {
 
 export const getPosts = createAsyncThunk("auth/getPosts", async (config: IGetPostsConfig | undefined, thunkAPI) => {
   try {
-    const response: any = await axiosGet("/posts", {
+    const response: any = await axiosAgent(eHttpMethod.GET, "/posts", {
       message: config?.message,
     });
     return response.data;
