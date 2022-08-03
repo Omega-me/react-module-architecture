@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IGlobalState } from "src/common/interfaces";
-import { APP_TITLE } from "src/common/labesl";
+import { APP_TITLE } from "src/common/labels";
 
 const initialState: IGlobalState = {
   title: APP_TITLE,

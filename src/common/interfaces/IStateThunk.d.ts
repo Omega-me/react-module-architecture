@@ -1,5 +1,5 @@
-export interface IStateThunk<I> {
-  data: I | I[];
+export interface IStateThunk<IState = any> {
+  data: IState | IState[];
   isError: boolean;
   isSuccess: boolean;
   isLoading: boolean;

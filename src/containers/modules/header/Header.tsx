@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { APP_TEST_PAGE_TITLE, APP_TITLE } from "src/common/labesl";
+import { APP_TEST_PAGE_TITLE, APP_TITLE } from "src/common/labels";
 import { useTitle } from "src/hooks";
 import s from "./header.module.scss";
 

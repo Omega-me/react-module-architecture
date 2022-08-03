@@ -1,12 +1,16 @@
-import { ActionReducerMapBuilder } from '@reduxjs/toolkit';
-import { IPost, IStateThunk } from 'src/common/interfaces';
-import { getPosts } from '../actions';
+import { ActionReducerMapBuilder } from "@reduxjs/toolkit";
+import { IPost, IStateThunk } from "src/common/interfaces";
+import { getPosts } from "../actions/posts.action";
 
 export class PostsReducer {
   private _builder?: ActionReducerMapBuilder<IStateThunk<IPost>>;
   private _state?: IStateThunk<IPost>;
 
-  constructor(options: { builder?: ActionReducerMapBuilder<IStateThunk<IPost>>; state?: IStateThunk<IPost> }) {
+  constructor(options: {
+    builder?: ActionReducerMapBuilder<IStateThunk<IPost>>;
+    state?: IStateThunk<IPost>;
+    payload?: any;
+  }) {
     this._builder = options && options.builder;
     this._state = options && options.state;
   }
@@ -16,7 +20,7 @@ export class PostsReducer {
       this._state.isLoading = false;
       this._state.isError = false;
       this._state.isSuccess = false;
-      this._state.message = '';
+      this._state.message = "";
       this._state.data = [];
     }
   }

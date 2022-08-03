@@ -1,14 +1,13 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import { AxiosResponse } from 'axios';
-import { toast } from 'react-toastify';
-import { toastOptions } from 'src/common/configs';
-import { eHttpMethod } from 'src/common/enums';
-import { IGetPostsConfig, IPost } from 'src/common/interfaces';
-import { axiosAgent } from 'src/services';
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
+import { toastOptions } from "src/common/configs";
+import { eHttpMethod } from "src/common/enums";
+import { IGetPostsConfig, IHttpReponse, IPost } from "src/common/interfaces";
+import { httpAgent } from "src/services";
 
-export const getPosts = createAsyncThunk('auth/getPosts', async (config: IGetPostsConfig | undefined, thunkAPI) => {
+export const getPosts = createAsyncThunk("auth/getPosts", async (config: IGetPostsConfig | undefined, thunkAPI) => {
   try {
-    const response: AxiosResponse<IPost[], any> | undefined = await axiosAgent(eHttpMethod.GET, '/posts', {
+    const response: IHttpReponse<IPost[]> | undefined = await httpAgent(eHttpMethod.GET, "/posts", {
       message: config?.message,
     });
     return response?.data;
