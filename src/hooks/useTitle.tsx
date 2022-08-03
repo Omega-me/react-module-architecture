@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from "src/state";
-import { setTitle } from "src/state/store/slices/global.store";
+import { useAppDispatch, useAppSelector } from 'src/state';
+import { setTitle } from 'src/state/store/store/global.store';
 
 /**
  *
