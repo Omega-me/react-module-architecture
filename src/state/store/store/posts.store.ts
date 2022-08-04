@@ -1,17 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IPost, IStateThunk } from "src/common/interfaces";
-import { PostsReducer } from "../reducers/posts.reducer";
+import { createSlice } from '@reduxjs/toolkit';
+import { IPost, IStateThunk } from 'src/common/interfaces';
+import { PostsReducer } from '../reducers/posts.reducer';
 
 const initialState: IStateThunk<IPost> = {
   data: [],
   isError: false,
   isSuccess: false,
   isLoading: false,
-  message: "",
+  message: '',
 };
 
 const auth = createSlice({
-  name: "posts",
+  name: 'posts',
   initialState,
   reducers: {
     resetPostState: (state: IStateThunk<IPost>) => {

@@ -1,9 +1,9 @@
-import { toast } from "react-toastify";
-import { toastOptions } from "src/common/configs";
-import { eHttpMethod } from "src/common/enums";
-import { IHttpConfig, IHttpReponse } from "src/common/interfaces";
-import { checkSuccess } from "src/common/utils";
-import { httpConnector } from "./httpConfig";
+import { toast } from 'react-toastify';
+import { toastOptions } from 'src/common/configs';
+import { eHttpMethod } from 'src/common/enums';
+import { IHttpConfig, IHttpReponse } from 'src/common/interfaces';
+import { checkSuccess } from 'src/common/utils';
+import { httpConnector } from './httpConfig';
 
 export const httpAgent = async <TData = any>(
   methode: eHttpMethod,
