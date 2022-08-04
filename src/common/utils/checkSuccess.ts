@@ -1,12 +1,12 @@
-import { eStatusCode } from "../enums";
-import { IHtttpReponse } from "../interfaces";
+import { eStatusCode } from '../enums';
+import { IHttpReponse } from '../interfaces';
 
 /**
  *
  * @param response AxiosResponse
  * @returns boolean
  */
-export const checkSuccess = <TData = any>(response: IHtttpReponse<TData> | undefined): boolean => {
+export const checkSuccess = <TData = any>(response: IHttpReponse<TData> | undefined): boolean => {
   if (
     response?.status === eStatusCode.OK ||
     response?.status === eStatusCode.CREATED ||
