@@ -7,7 +7,7 @@ const Posts = () => {
   const { posts, isLoading, isError, message, setPosts, resetPostsState } = usePosts();
 
   const handelGetPosts = () => {
-    setPosts();
+    setPosts({ message: 'success' });
   };
   const handelResetPosts = () => {
     resetPostsState();
