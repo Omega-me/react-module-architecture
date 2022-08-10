@@ -30,7 +30,7 @@ export class PostsReducer {
         .addCase(getPosts.fulfilled, (state: IStateThunk<IPost>, { payload }) => {
           state.isLoading = false;
           state.isSuccess = true;
-          state.data = payload as IPost[];
+          state.data = payload as any;
         })
         .addCase(getPosts.rejected, (state: IStateThunk<IPost>, { payload }) => {
           state.isError = true;
