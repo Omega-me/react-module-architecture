@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { ToastContainer } from "react-toastify";
-import { Footer } from "src/components";
-import { useTitle } from "src/hooks";
-import Header from "../header/Header";
-import s from "./layout.module.scss";
+import { Footer } from 'components';
+import { useTitle } from 'hooks';
+import React, { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
+import Header from '../header/Header';
+import s from './layout.module.scss';
 
 interface ILayoutProps {
   children: React.ReactNode;

@@ -1,13 +1,13 @@
-import { IPost } from "src/common/interfaces";
-import { Spinner } from "src/components";
-import { usePosts } from "src/hooks";
-import s from "./posts.module.scss";
+import { IPost } from 'common/interfaces';
+import { Spinner } from 'components';
+import { usePosts } from 'hooks';
+import s from './posts.module.scss';
 
 const Posts = () => {
   const { posts, isLoading, isError, message, setPosts, resetPostsState } = usePosts();
 
   const handelGetPosts = () => {
-    setPosts();
+    setPosts({ message: 'success' });
   };
   const handelResetPosts = () => {
     resetPostsState();

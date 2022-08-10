@@ -1,7 +1,7 @@
-import { IGetPostsConfig, IPost } from "src/common/interfaces";
-import { resetPostState } from "src/state/store/store/posts.store";
-import { useAppDispatch, useAppSelector } from "src/state/store/store";
-import { getPosts } from "src/state/store/actions/posts.action";
+import { IGetPostsConfig, IPost } from 'common/interfaces';
+import { useAppDispatch, useAppSelector } from 'state';
+import { getPosts } from 'state/store/actions/posts.action';
+import { resetPostState } from 'state/store/store/posts.store';
 
 /**
  * @returns data, isError, isLoading, message, setPosts, resetPostsState

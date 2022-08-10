@@ -1,13 +1,13 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IGlobalState } from "src/common/interfaces";
-import { APP_TITLE } from "src/common/labels";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IGlobalState } from 'common/interfaces';
+import { APP_TITLE } from 'common/labels';
 
 const initialState: IGlobalState = {
   title: APP_TITLE,
 };
 
 const testSlice = createSlice({
-  name: "global",
+  name: 'global',
   initialState,
   reducers: {
     setTitle: (state, { payload }: PayloadAction<string | undefined>) => {
