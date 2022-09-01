@@ -5,8 +5,7 @@ import s from './posts.module.scss';
 
 const Posts = () => {
   const { posts, isLoading, isError, message, setPosts, resetPostsState } = usePosts();
-
-  const handelGetPosts = () => {
+  const handelGetPosts = async () => {
     setPosts({ message: 'success' });
   };
   const handelResetPosts = () => {

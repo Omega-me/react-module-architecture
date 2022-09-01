@@ -1,6 +1,6 @@
 import { toastOptions } from 'common/configs';
 import { eHttpMethod } from 'common/enums';
-import { IHttpConfig, IHttpReponse } from 'common/interfaces';
+import { IHttpConfig, IHttpReponse, IResponse } from 'common/interfaces';
 import { checkSuccess } from 'common/utils';
 import { toast } from 'react-toastify';
 import { httpConnector } from './httpConfig';
@@ -9,7 +9,7 @@ export const httpAgent = async <TData = any>(
   methode: eHttpMethod,
   url: string,
   config?: IHttpConfig<TData>
-): Promise<IHttpReponse<TData> | undefined> => {
+): Promise<IResponse<TData> | undefined> => {
   let response: IHttpReponse<TData> | undefined = undefined;
   if (methode === eHttpMethod.POST || methode === eHttpMethod.PUT || methode === eHttpMethod.PATCH) {
     response = await httpConnector[methode](url, config?.data, config?.axiosConfig);
@@ -21,5 +21,5 @@ export const httpAgent = async <TData = any>(
       toast.success(config?.message, toastOptions);
     }
   }
-  return response;
+  return response?.data;
 };
