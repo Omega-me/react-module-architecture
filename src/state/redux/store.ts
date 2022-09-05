@@ -4,7 +4,7 @@ import rootReducer from './reducers/root.reducer';
 
 export const store = configureStore({ reducer: rootReducer });
 // store initialiser here
-// store.dispatch()
+// store.dispatch(getPosts());
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

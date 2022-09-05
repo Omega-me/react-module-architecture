@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from 'state';
-import { setTitle } from 'state/store/store/global.store';
+import { setTitle } from 'state/redux/store/global.store';
 
 /**
  *

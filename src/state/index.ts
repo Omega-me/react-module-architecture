@@ -1,1 +1,1 @@
-export * from "./store/store";
+export * from './redux/store';

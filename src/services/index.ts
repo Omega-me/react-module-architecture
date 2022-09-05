@@ -1,2 +1,2 @@
-export * from "./httpConfig";
-export * from "./httpAgent";
+export * from './httpConfig';
+export * from './httpClient';

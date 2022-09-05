@@ -3,11 +3,11 @@ import { toastOptions } from 'common/configs';
 import { eHttpMethod } from 'common/enums';
 import { IGetPostsConfig, IPost, IResponse } from 'common/interfaces';
 import { toast } from 'react-toastify';
-import { httpAgent } from 'services';
+import { httpClient } from 'services';
 
 export const getPosts = createAsyncThunk('auth/getPosts', async (config: IGetPostsConfig | undefined, thunkAPI) => {
   try {
-    const response: IResponse<IPost[]> | undefined = await httpAgent(eHttpMethod.GET, '/posts', {
+    const response: IResponse<IPost[]> | undefined = await httpClient(eHttpMethod.GET, '/posts', {
       message: config?.message,
     });
     return response;

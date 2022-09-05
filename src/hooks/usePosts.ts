@@ -1,7 +1,7 @@
 import { IGetPostsConfig, IPost } from 'common/interfaces';
 import { useAppDispatch, useAppSelector } from 'state';
-import { getPosts } from 'state/store/actions/posts.action';
-import { resetPostState } from 'state/store/store/posts.store';
+import { getPosts } from 'state/redux/actions/posts.action';
+import { resetPostState } from 'state/redux/store/posts.store';
 
 /**
  * @returns data, isError, isLoading, message, setPosts, resetPostsState
